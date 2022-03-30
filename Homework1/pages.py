@@ -8,7 +8,7 @@ from selenium.common.exceptions import StaleElementReferenceException
 
 class BasePage(object):
     locators = BasePageLocators()
-    CLICK_RETRY = 10
+    CLICK_RETRY = 20
 
     def __init__(self, driver, config):
         self.driver = driver
@@ -43,10 +43,10 @@ class BasePage(object):
                 if i == BasePage.CLICK_RETRY - 1:
                     raise
 
-    def login(self):
+    def login(self,login,password):
         self.click(BasePage.locators.LOGIN_BUTTON_LOCATOR)
-        self.input(BasePage.locators.EMAIL_LOCATOR, self.config['login'])
-        self.input(BasePage.locators.PASSWORD_LOCATOR, self.config['password'])
+        self.input(BasePage.locators.EMAIL_LOCATOR, login)
+        self.input(BasePage.locators.PASSWORD_LOCATOR, password)
         self.click(BasePage.locators.ENTER_BUTTON_LOCATOR)
 
 
@@ -74,8 +74,8 @@ class ProfilePage(MainPage):
         self.clickretry(ProfilePage.locators.PROFILE_LOCATOR)
         self.clickretry(ProfilePage.locators.FULLNAME_INFO_LOCATOR)
         self.find(ProfilePage.locators.FULLNAME_INFO_LOCATOR).clear()
-        self.find(ProfilePage.locators.NUMBER_INFO_LOCATOR).clear()
         self.input(ProfilePage.locators.FULLNAME_INFO_LOCATOR, self.config['fullname'])
+        self.find(ProfilePage.locators.NUMBER_INFO_LOCATOR).clear()
         self.input(ProfilePage.locators.NUMBER_INFO_LOCATOR, self.config['number'])
         self.click(ProfilePage.locators.SAVE_INFO_LOCATOR)
 

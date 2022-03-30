@@ -12,16 +12,16 @@ class BasePageLocators:
 class MainPageLocators(BasePageLocators):
     SCROLL_MENU_LOCATOR = (By.XPATH, '//*[contains(@class, "right-module-rightButton")]')
     LOGOUT_BUTTON_LOCATOR = (By.XPATH, '//*[@href="/logout"]')
-    INSTRUCTION_MODULE_TITLE_LOCATOR = (By.XPATH, '//*[contains(@class, "instruction-module-title")]')
+    INSTRUCTION_MODULE_TITLE_LOCATOR = (By.XPATH, '//*[contains(@data-test, "header-sort")]')
     PROFILE_LOCATOR = (By.XPATH, '//*[@href="/profile"]')
     TOOLS_LOCATOR = (By.XPATH, '//*[@href="/tools"]')
     BILLING_LOCATOR = (By.XPATH, '//*[@href="/billing"]')
 
 
 class ProfilePageLocators(MainPageLocators):
-    FULLNAME_INFO_LOCATOR = (By.XPATH, '//*[contains(@class, "input__inp")]')
+    FULLNAME_INFO_LOCATOR = (By.XPATH, '//*[contains(@data-name, "fio")]/div/input')
     NUMBER_INFO_LOCATOR = (By.XPATH, '//*[contains(@data-name, "phone")]/div/input')
-    SAVE_INFO_LOCATOR = (By.XPATH, '//*[contains(@class, "button button_submit")]')
+    SAVE_INFO_LOCATOR = (By.XPATH, '//*[contains(@class, "button_submit")]')
     SUCCESSSAVE_LOCATOR = (By.XPATH, '//*[contains(@data-class-name, "SuccessView")]/div')
 
 

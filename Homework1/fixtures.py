@@ -20,6 +20,13 @@ def driver(config):
     yield driver
     driver.quit()
 
+@pytest.fixture(scope='session')
+def credentials():
+    with open('creds', 'r') as f:
+        user = f.readline().strip()
+        password = f.readline().strip()
+
+    return user, password
 
 @pytest.fixture
 def base_page(driver, config):
