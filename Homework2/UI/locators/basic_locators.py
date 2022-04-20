@@ -28,14 +28,19 @@ class CompanyPageLocator:
     BANNER_COMPANY_LOCATOR =(By.XPATH, '//*[contains(@id, "patterns_banner_4")]')
     BANNERS_CMP_LOCATOR=(By.XPATH, '//*[contains(@class, "banners")]')
     CLICK_ROLES_LOCATOR = (By.XPATH,'//*[contains(@class, "imagePreview - module - emptyImageText")]')
-    ROLES_LOCATOR = (By.XPATH,'//*[contains(@data-pattern-id, "4")]/div/div/input')
-    SAVE_COMPANY_LOCATOR = (By.XPATH, '//*[contains(@data-test, "submit_banner_button")]')
+    ROLES_AND_UPLOAD_LOCATOR = (By.XPATH,'//*[contains(@data-pattern-id, "4")]/div/div/input')
+    SAVE_COMPANY_LOCATOR = (By.XPATH, '//*[contains(@cid, "view553")]')
 
 
 
 class SegmentsPageLocator:
     CREATE_LOCATOR = (By.XPATH, '//*[contains(@class, "button__text")]')
-    CID_LOCATOR = (By.XPATH, '//*[contains(@cid, "view392")]')
-    CHECK_BOX_LOCATOR = (By.XPATH, '//*[contains(@class, "adding-segments-source__checkbox")]')
-    NAME_SEGMENT = (By.XPATH, '//*[contains(@class, "adding-segments-source__checkbox")]/div/div/input')
+    FIRST_CREATE_LOCATOR =(By.XPATH,'//*[@href="/segments/segments_list/new/"]')
+    CH_LOCATOR = (By.XPATH,'//*[contains(@class, "adding-segments-modal__block-left")]/div[8]')
+    ADDING_SEGMENT_SOURCE =(By.XPATH,'//*[contains(@class, "adding-segments-source__expand")]')
+    VALUE_PAY_SOURCE_LOCATOR = (By.XPATH, '//*[contains(@value, "pay")]')
+    ADD_LOCATOR = (By.XPATH, '//*[contains(@class, "adding-segments-modal__footer")]/div/button/div')
+    INPUT_LOCATOR = (By.XPATH,'//*[contains(@class, "input input_create-segment-form")]/div/input')
+    CREATE_SEGMENT_LOCATOR = (By.XPATH, '//*[contains(@class, "button__text")]')
     BUTTON_LOCATOR = (By.XPATH, '//*[contains(@class, "button__text")]')
+    CHECK_LOCATOR =(By.XPATH, '//*[contains(@class, "select-module-selectTitle")]')

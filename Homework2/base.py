@@ -1,17 +1,23 @@
-
 from contextlib import contextmanager
-
-
 from _pytest.fixtures import FixtureRequest
 from UI.fixtures import *
 from UI.pages.main_page import MainPage
+import faker
+
+fake = faker.Faker()
+
 
 CLICK_RETRY = 3
+
+
 
 
 class BaseCase:
     driver = None
     authorize = True
+
+    def random_text(self, COUNT):
+        return fake.lexify(text='?' * COUNT)
 
     @contextmanager
     def switch_to_window(self, current, close=False):
@@ -45,5 +51,6 @@ class BaseCase:
 
 
         self.logger.debug('Initial setup done!')
+
 
 

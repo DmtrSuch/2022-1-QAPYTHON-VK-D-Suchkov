@@ -17,6 +17,6 @@ class CompanyPage(BasePage):
         self.scroll(CompanyPage.locators.BANNER_COMPANY_LOCATOR)
         self.click(CompanyPage.locators.BANNER_COMPANY_LOCATOR)
         self.clickretry(CompanyPage.locators.BANNERS_CMP_LOCATOR)
-        self.upload(CompanyPage.locators.ROLES_LOCATOR,file_path)
+        self.upload(CompanyPage.locators.ROLES_AND_UPLOAD_LOCATOR,file_path)
         self.clickretry(CompanyPage.locators.SAVE_COMPANY_LOCATOR)
 

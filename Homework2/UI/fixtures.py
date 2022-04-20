@@ -9,8 +9,10 @@ from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.firefox import GeckoDriverManager
 from UI.pages.login_page import LoginPage
+import faker
 
-
+fake = faker.Faker()
+COUNT = 10
 
 
 def pytest_configure(config):
@@ -98,6 +100,7 @@ def credentials():
         password = f.readline().strip()
 
     return user, password
+
 
 
 @pytest.fixture(scope='session')
