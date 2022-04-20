@@ -29,7 +29,7 @@ class CompanyPageLocator:
     BANNERS_CMP_LOCATOR=(By.XPATH, '//*[contains(@class, "banners")]')
     CLICK_ROLES_LOCATOR = (By.XPATH,'//*[contains(@class, "imagePreview - module - emptyImageText")]')
     ROLES_LOCATOR = (By.XPATH,'//*[contains(@data-pattern-id, "4")]/div/div/input')
-    SAVE_COMPANY_LOCATOR = (By.XPATH, '//*[contains(@class, "footer")]/div/div/button/div')
+    SAVE_COMPANY_LOCATOR = (By.XPATH, '//*[contains(@data-test, "submit_banner_button")]')
 
 
 
