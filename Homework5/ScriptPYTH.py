@@ -35,7 +35,7 @@ if __name__ == '__main__':
     ]
 
     # 3
-    locations_counted = Counter([line[6] for line in lines])
+    locations_counted = Counter([line[6].split('?')[0] for line in lines])
     result['Task 3.Top 10 Request url:'] = [
         {'location': url, 'count': value}
         for url, value in sorted(locations_counted.items(), key=lambda item: item[1], reverse=True)[:10]
@@ -43,7 +43,7 @@ if __name__ == '__main__':
 
     # 4
     client_error_requests = [
-        {'ip': line[0], 'location': line[6], 'status': line[8], 'size': int(line[9])}
+        {'ip': line[0], 'location': line[6].split('?')[0], 'status': line[8], 'size': int(line[9])}
         for line in lines if re.match('4[0-9]{2}$', line[8])
     ]
     result['Task 4.Top 5 Request bytes'] = [
@@ -61,7 +61,7 @@ if __name__ == '__main__':
             json.dump(result,out)
         out.close()
     else:
-        with open('solve.txt', 'w') as out:
+        with open('solvePY.txt', 'w') as out:
             for key, val in result.items():
-                out.write('{}:\n{}\n'.format(key, val))
+                out.write('{}:\n{}\n\n'.format(key, val))
         out.close()

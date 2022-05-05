@@ -29,7 +29,8 @@ awk '{print $1,$2}'
 }
 
 return_ukzi(){
-awk '{print $7,$9,$10,$1}'
+awk '{split($7, a, "?")
+      print a[1],$9,$10,$1}'
 }
 
 return_kv(){
@@ -53,7 +54,7 @@ sort -rnk10
 }
 
 request_url(){
-awk '{print $7}'
+awk '{split($7, a, "?"); print a[1]}'
 }
 
 request_ip(){
@@ -119,7 +120,7 @@ echo "====================="
 cat $LOGFILE \
 | request_method \
 | wordcount \
-| return_kv \
+| return_kv
 echo "--------"
 echo""
 }
@@ -132,14 +133,15 @@ cat $LOGFILE\
 | wordcount \
 | sort_desc \
 | return_kv_url \
+| column -t \
 | return_top_ten
 echo "--------"
 echo""
 }
 
 # executing
-get_count_all_string > solve.txt
-get_request >> solve.txt
-get_request_url >> solve.txt
-get_request_top_bytes_and_4xx >> solve.txt
-get_request_top_ip_and_5xx >> solve.txt
+get_count_all_string > solveSH.txt
+get_request >> solveSH.txt
+get_request_url >> solveSH.txt
+get_request_top_bytes_and_4xx >> solveSH.txt
+get_request_top_ip_and_5xx >> solveSH.txt
