@@ -1,0 +1,15 @@
+Task 1.Count of all string:
+{'count': 225133}
+
+Task 2.Count Request::
+[{'type': 'GET', 'count': 122095}, {'type': 'POST', 'count': 102503}, {'type': 'HEAD', 'count': 528}, {'type': 'PUT', 'count': 6}, {'type': 'Unknown', 'count': 1}]
+
+Task 3.Top 10 Request url::
+[{'location': '/administrator/index.php', 'count': 103939}, {'location': '/apache-log/access.log', 'count': 26336}, {'location': '/index.php', 'count': 7682}, {'location': '/', 'count': 6981}, {'location': '/templates/_system/css/general.css', 'count': 4980}, {'location': '/robots.txt', 'count': 3199}, {'location': 'http://almhuette-raith.at/administrator/index.php', 'count': 2356}, {'location': '/favicon.ico', 'count': 2201}, {'location': '/wp-login.php', 'count': 1757}, {'location': '/administrator/', 'count': 1563}]
+
+Task 4.Top 5 Request bytes:
+[{'ip': '189.217.45.73', 'location': '/index.php', 'status': '404', 'size': 1417}, {'ip': '189.217.45.73', 'location': '/index.php', 'status': '404', 'size': 1417}, {'ip': '189.217.45.73', 'location': '/index.php', 'status': '404', 'size': 1417}, {'ip': '189.217.45.73', 'location': '/index.php', 'status': '404', 'size': 1417}, {'ip': '104.129.9.248', 'location': '/index.php', 'status': '404', 'size': 1397}]
+
+Task 5.Top 5 IP:
+[{'ip': '189.217.45.73', 'count': 225}, {'ip': '82.193.127.15', 'count': 4}, {'ip': '91.210.145.36', 'count': 3}, {'ip': '194.87.237.6', 'count': 2}, {'ip': '198.38.94.207', 'count': 2}]
+

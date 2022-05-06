@@ -1,0 +1,46 @@
+Task 1.Count of all string
+=====================
+225133
+--------
+
+Task 2.Count Request:
+=====================
+1 Unknown
+122095 GET
+528 HEAD
+102503 POST
+6 PUT
+--------
+
+Task 3.Top 10 Request url's:
+====================
+103939  /administrator/index.php
+26336   /apache-log/access.log
+7682    /index.php
+6981    /
+4980    /templates/_system/css/general.css
+3199    /robots.txt
+2356    http://almhuette-raith.at/administrator/index.php
+2201    /favicon.ico
+1757    /wp-login.php
+1563    /administrator/
+--------
+
+Task 4.Top 5 Request bytes
+=====================
+/index.php 404 1417 189.217.45.73
+/index.php 404 1417 189.217.45.73
+/index.php 404 1417 189.217.45.73
+/index.php 404 1417 189.217.45.73
+//index.php/joomla-pages-ii/user-registration.html 404 1397 95.82.195.206
+--------
+
+Task 5.Top 5 IP
+=====================
+225 189.217.45.73
+3 91.210.145.36
+3 82.193.127.15
+2 198.38.94.207
+2 195.133.48.198
+--------
+
