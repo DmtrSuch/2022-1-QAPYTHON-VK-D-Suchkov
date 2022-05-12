@@ -7,7 +7,7 @@ class RequestsCount(Base):
     __tablename__ = 'requests_count'
 
     def __repr__(self):
-        return f"<Task01(" \
+        return f"<RequestsCount(" \
                f"id='{self.id}'," \
                f"count='{self.count}'," \
                f")>"
@@ -20,7 +20,7 @@ class RequestsCountByType(Base):
     __tablename__ = 'requests_count_by_type'
 
     def __repr__(self):
-        return f"<Task02(" \
+        return f"<RequestsCountByType(" \
                f"id='{self.id}'," \
                f"r_type='{self.r_type}'," \
                f"count='{self.count}'," \
