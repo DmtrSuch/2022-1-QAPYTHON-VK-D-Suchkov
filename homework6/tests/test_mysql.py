@@ -47,7 +47,6 @@ class TestTop5LocationsBySize(MySQLBase):
 
     def test_top_5_locations_by_size(self):
         rows = self.mysql.session.query(Top5LocationsBySize).all()
-        #import pdb;pdb.set_trace()
         assert len(rows) == len(self.parsed_log['Top 5 Location By Size'])
 
 
