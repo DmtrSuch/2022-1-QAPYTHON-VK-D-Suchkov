@@ -7,7 +7,7 @@
       scm:
         - git:
             url: https://github.com/DmtrSuch/2022-1-QAPYTHON-VK-D-Suchkov.git
-      script-path: "simple.groovy"
+      script-path: "FinProject/simple.groovy"
 
     wrappers:
       - timestamps
