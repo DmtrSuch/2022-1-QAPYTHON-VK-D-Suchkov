@@ -1,0 +1,8 @@
+- scm:
+    name: qa-python-scm
+    scm:
+      - git:
+          url: https://github.com/DmtrSuch/2022-1-QAPYTHON-VK-D-Suchkov
+          basedir: .
+          branches:
+            - '$BRANCH'
