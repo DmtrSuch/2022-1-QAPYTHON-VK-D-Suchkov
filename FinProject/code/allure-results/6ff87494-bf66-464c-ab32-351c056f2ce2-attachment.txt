@@ -1,0 +1,20 @@
+[33mWARNING [0m urllib3.connectionpool:connectionpool.py:812 Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f83b89b4970>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /wd/hub/session
+[33mWARNING [0m urllib3.connectionpool:connectionpool.py:812 Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f83b8c16130>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /wd/hub/session
+[33mWARNING [0m urllib3.connectionpool:connectionpool.py:812 Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f83b8c16460>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /wd/hub/session
+[1m[31mERROR   [0m sqlalchemy.pool.impl.QueuePool:base.py:702 Exception during reset or similar
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 676, in _finalize_fairy
+    fairy._reset(pool)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 881, in _reset
+    pool._dialect.do_rollback(self)
+  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 480, in rollback
+    self._read_ok_packet()
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 443, in _read_ok_packet
+    pkt = self._read_packet()
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 692, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 748, in _read_bytes
+    raise err.OperationalError(
+pymysql.err.OperationalError: (2013, 'Lost connection to MySQL server during query')
