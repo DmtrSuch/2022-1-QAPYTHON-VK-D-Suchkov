@@ -8,7 +8,7 @@
         - git:
             url: https://github.com/DmtrSuch/2022-1-QAPYTHON-VK-D-Suchkov.git
             branch: finProject
-      script-path: "FinProject/simple.groovy"
+      script-path: "simple.groovy"
 
     wrappers:
       - timestamps
