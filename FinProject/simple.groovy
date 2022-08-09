@@ -12,7 +12,7 @@ pipeline {
                 steps {
                     step([
                         $class: 'DockerComposeBuilder',
-                        dockerComposeFile: 'FinProject/docker-compose.yml',
+                        dockerComposeFile: '$WORKSPACE/FinProject/docker-compose.yml',
                         option: [$class: 'StartAllServices'],
                         useCustomDockerComposeFile: true
                     ])
