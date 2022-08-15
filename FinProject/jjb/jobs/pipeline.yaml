@@ -1,0 +1,19 @@
+- job:
+    name: test-qa-pipeline-jjb
+    description: "JJB Project, Pipeline\n"
+    project-type: pipeline
+
+    pipeline-scm:
+      scm:
+        - git:
+            url: https://github.com/DmtrSuch/2022-1-QAPYTHON-VK-D-Suchkov.git
+            branch: finProject
+      script-path: "simple.groovy"
+
+    wrappers:
+      - timestamps
+      - workspace-cleanup
+
+    triggers:
+      - pollscm:
+          cron: '* * * * *'
